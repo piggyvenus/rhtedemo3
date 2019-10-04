@@ -84,7 +84,7 @@
         $scope.remove = function (fruit) {
           $http({
             method: 'DELETE',
-            url: 'http://oceanic-lamp-welcome-oceanic-lamp.apps.cluster-6152.sandbox526.opentlc.com/backend/api/fruits/' + fruit.id
+            url: 'http://quarkusdb-quarkusdb.apps.ocp4.home.ocpcloud.com/api/fruits/' + fruit.id
           }).then( _success, _error );
           //console.log("DELETE " + response.statusText);
         };
@@ -102,7 +102,7 @@
         function _refreshPageData() {
           $http({
             method: 'GET',
-            url: 'http://oceanic-lamp-welcome-oceanic-lamp.apps.cluster-6152.sandbox526.opentlc.com/backend/api/fruits',
+            url: 'http://quarkusdb-quarkusdb.apps.ocp4.home.ocpcloud.com/api/fruits',
           }).then(function successCallback(response) {
             $scope.fruits = response.data;
           }, function errorCallback(response) {
