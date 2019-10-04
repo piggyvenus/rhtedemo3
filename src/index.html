@@ -58,14 +58,14 @@
           if ($scope.form.id == -1) {
             //Id is absent so add fruits - POST operation
             method = "POST";
-            url = 'http://oceanic-lamp-welcome-oceanic-lamp.apps.cluster-6152.sandbox526.opentlc.com/backend/api/fruits';
+            url = 'http://quarkusdb-quarkusdb.apps.ocp4.home.ocpcloud.com/api/fruits';
             data.name = $scope.form.name;
             data.stock = $scope.form.stock;
             console.log(url);
           } else {
             //If Id is present, it's edit operation - PUT operation
             method = "PUT";
-            url = 'http://oceanic-lamp-welcome-oceanic-lamp.apps.cluster-6152.sandbox526.opentlc.com/backend/api/fruits/' + $scope.form.id;
+            url = 'http://quarkusdb-quarkusdb.apps.ocp4.home.ocpcloud.com/api/fruits/' + $scope.form.id;
             data.name = $scope.form.name;
             data.stock = $scope.form.stock;
             console.log(url);
